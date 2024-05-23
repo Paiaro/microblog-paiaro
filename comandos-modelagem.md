@@ -15,6 +15,10 @@ CREATE DATABASE microblog_gabriel CHARACTER SET utf8mb4;
 
 
 ````sql
-CREATE TABLE usuarios();
+CREATE TABLE usuarios(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL,
+    senha VARCHAR(255) NOT NULL, email VARCHAR(45) NOT NULL UNIQUE, tipo ENUM('admin','editor') NOT NULL
+);
 
 ```
