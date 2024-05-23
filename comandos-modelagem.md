@@ -11,3 +11,10 @@ CREATE DATABASE microblog_gabriel CHARACTER SET utf8mb4;
 ```
 
 
+### CRIAR tabela de usuários
+
+
+````sql
+CREATE TABLE usuarios();
+
+```
