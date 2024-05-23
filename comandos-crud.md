@@ -21,6 +21,7 @@ VALUES ('Gabriel',"gabrielpaiarop@gmail.com",'123','admin');
 INSERT INTO usuarios (nome, email, senha, tipo)
 VALUES ('Cracudo',"cracudo@gmail.com",'1234','editor');
 ```
+
 ```sql
 INSERT INTO usuarios (nome, email, senha, tipo)
 VALUES ('Tortinho','tortinho@gmail.com','321','editor');
