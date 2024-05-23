@@ -10,3 +10,5 @@
 
 ## Exemplos
 
+### INSERT na tabela de usuários
+
