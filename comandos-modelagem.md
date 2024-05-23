@@ -35,3 +35,13 @@ CREATE TABLE noticias(
 );
 
 ```
+
+### CRiar o relacionamento
+
+Utilizamos uma `constraint` (restrição) para criar a relação entre as tabelas através das chaves **primária** e **estrangeira**
+
+```sql
+ALTER TABLE noticias
+ADD CONSTRAINT fk_noticias_usuarios
+FOREIGN KEY (usuario_id) REFERENCES usuarios (id);
+```
