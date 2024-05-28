@@ -104,5 +104,6 @@ SELECT titulo, data FROM noticias ORDER BY DATA DESC;
 **Objetivo:** realizar uma consulta que mostre a data e o titulo da notícias **e** o nome do autor da notícia.
 
 ```sql
+-- Selecionando as colunas indicando as tabelas em que estão
 SELECT noticias.data, noticias.titulo, usuarios.nome FROM noticias JOIN usuarios ON noticias.usuario_id = usuarios.id;
 ```
