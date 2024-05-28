@@ -96,5 +96,6 @@ SELECT titulo, data FROM noticias;
 ```
 ```sql
 SELECT titulo, data FROM noticias ORDER BY DATA DESC;
+-- Usamos o ORDER BY data DESC para classificar em ordem decrescente pela data
 
 ```
