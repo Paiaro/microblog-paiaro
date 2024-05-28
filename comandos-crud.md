@@ -60,6 +60,10 @@ DELETE FROM usuarios WHERE id = 2;
 
 1) insira mais dois usuarios quaisquer dados. deixe um como `admin` e o outro como `editor`.
 
+```sql
+INSERT INTO usuarios(nome,email,senha,tipo) VALUES ("cracudo","tortinho");
+
+```
 2) Em uma nova consulta SQL, mostre os `id`, `nome` e `tipo` de todos os usuarios atuais.
 
 ```sql
