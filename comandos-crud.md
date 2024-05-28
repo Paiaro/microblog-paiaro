@@ -87,3 +87,14 @@ INSERT INTO noticias (titulo, texto, resumo, imagem, usuario_id) VALUES ('assalt
 INSERT INTO noticias (titulo, texto, resumo, imagem, usuario_id) VALUES ('Cachorros que veem cores', 'um estudo diz que os cachorros enxergam mais cores do que podiamos imaginar', 'Mundo canino com mais cor','cachorros.jpg', 4);
 
 ```
+
+### SELECT em notícias
+
+```sql
+SELECT titulo, data FROM noticias;
+
+```
+```sql
+SELECT titulo, data FROM noticias ORDER BY DATA DESC;
+
+```
