@@ -42,3 +42,10 @@ SELECT * FROM usuarios
 WHERE id >1;
 ```
 
+### UPDATE na tabela de usuários
+
+```sql
+UPDATE usuarios SET tipo = 'editor' WHERE id = 1;
+-- sempre passar pelo menos uma condição para o update
+```
+
