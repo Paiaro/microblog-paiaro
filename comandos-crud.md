@@ -55,3 +55,15 @@ UPDATE usuarios SET tipo = 'editor' WHERE id = 1;
 DELETE FROM usuarios WHERE id = 2;
 
 ```
+
+### UPDATE na tabela de usuários
+
+1) insira mais dois usuarios quaisquer dados. deixe um como `admin` e o outro como `editor`.
+
+2) Em uma nova consulta SQL, mostre os `id`, `nome` e `tipo` de todos os usuarios atuais.
+
+```sql
+SELECT nome, id, tipo FROM usuarios;
+
+
+```
