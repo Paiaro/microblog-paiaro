@@ -65,5 +65,4 @@ DELETE FROM usuarios WHERE id = 2;
 ```sql
 SELECT nome, id, tipo FROM usuarios;
 
-
 ```
