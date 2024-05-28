@@ -49,3 +49,10 @@ UPDATE usuarios SET tipo = 'editor' WHERE id = 1;
 -- sempre passar pelo menos uma condição para o update
 ```
 
+### UPDATE na tabela de usuários
+
+```sql
+DELETE FROM usuarios WHERE id = 2;
+
+
+```
