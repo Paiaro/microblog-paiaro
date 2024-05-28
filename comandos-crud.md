@@ -70,3 +70,12 @@ INSERT INTO usuarios(nome,email,senha,tipo) VALUES ("cracudo","tortinho");
 SELECT nome, id, tipo FROM usuarios;
 
 ```
+
+## Exemplos para tabelas de noticias
+
+### Inserir notícias 
+
+```sql
+INSERT INTO noticias (titulo, texto, resumo, imagem, usuario_id) VALUES ('Meu pai ganhou na mega-sena', 'e foi comprar cigarro e nunca mais voltou', 'fugiu com uma novinha');
+
+```
