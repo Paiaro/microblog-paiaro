@@ -105,5 +105,6 @@ SELECT titulo, data FROM noticias ORDER BY DATA DESC;
 
 ```sql
 -- Selecionando as colunas indicando as tabelas em que estão
+-- especificamos as tabelas que serão "juntadas/combinadas" usando o JOIN
 SELECT noticias.data, noticias.titulo, usuarios.nome FROM noticias JOIN usuarios ON noticias.usuario_id = usuarios.id;
 ```
