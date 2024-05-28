@@ -76,6 +76,14 @@ SELECT nome, id, tipo FROM usuarios;
 ### Inserir notícias 
 
 ```sql
-INSERT INTO noticias (titulo, texto, resumo, imagem, usuario_id) VALUES ('Meu pai ganhou na mega-sena', 'e foi comprar cigarro e nunca mais voltou', 'fugiu com uma novinha');
+INSERT INTO noticias (titulo, texto, resumo, imagem, usuario_id) VALUES ('Meu pai ganhou na mega-sena', 'e foi comprar cigarro e nunca mais voltou', 'fugiu com uma novinha','premio.jpg', 1);
+
+```
+```sql
+INSERT INTO noticias (titulo, texto, resumo, imagem, usuario_id) VALUES ('assalto em SP da errado', 'assaltante quebrou a cara ao cair em bueiro', 'Assalto em SP','roubo.jpg', 3);
+
+```
+```sql
+INSERT INTO noticias (titulo, texto, resumo, imagem, usuario_id) VALUES ('Cachorros que veem cores', 'um estudo diz que os cachorros enxergam mais cores do que podiamos imaginar', 'Mundo canino com mais cor','cachorros.jpg', 4);
 
 ```
