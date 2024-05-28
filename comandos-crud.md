@@ -54,5 +54,4 @@ UPDATE usuarios SET tipo = 'editor' WHERE id = 1;
 ```sql
 DELETE FROM usuarios WHERE id = 2;
 
-
 ```
