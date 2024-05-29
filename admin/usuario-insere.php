@@ -9,6 +9,8 @@ if (isset($_POST['inserir'])) {
 	$nome = $_POST['nome'];
 	$email = $_POST['email'];
 	$tipo = $_POST['tipo'];
+	//criptografando a senha
+	$senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
 }
 ?>
 
