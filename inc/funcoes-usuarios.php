@@ -10,3 +10,17 @@ function inserirUsuario($conexao, $nome, $email, $tipo, $senha)
     // Executando o comando no banco
     mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
 }
+
+
+
+
+
+function lerUsuarios($conexao){
+
+$sql = "SELECT id,nome,tipo,email FROM usuarios";
+}
+
+
+
+
+
