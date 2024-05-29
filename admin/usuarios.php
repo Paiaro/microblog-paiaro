@@ -1,6 +1,9 @@
 <?php 
 require_once "../inc/cabecalho-admin.php";
 require_once "../inc/funcoes-usuarios.php";
+
+// chamando a função que carrega/lista/lê os usuarios 
+lerUsuarios($conexao);
 ?>
 
 
