@@ -3,9 +3,10 @@ require_once "../inc/cabecalho-admin.php";
 require_once "../inc/funcoes-usuarios.php";
 
 // chamando a função que carrega/lista/lê os usuarios 
-lerUsuarios($conexao);
+$lsitaUsuarios = lerUsuarios($conexao);
 ?>
 
+<pre><?=var_dump($lsitaUsuarios)?></pre>
 
 <div class="row">
 	<article class="col-12 bg-white rounded shadow my-1 py-4">
