@@ -11,7 +11,7 @@ $banco = "microblog_gabriel";
 
 //função para conexão com o servidor de banco de dados.
 
-$conexao = mysqli_connect($servidor,$usuario,$senha, $banco);
+$conexao = mysqli_connect($servidor, $usuario, $senha, $banco);
 
 // definindo o charset da conexão para utf8
 
@@ -26,4 +26,3 @@ mysqli_set_charset($conexao, "utf8");
 // echo "CONEXÃO BEM SUCEDIDA !";
 
 // }
-
