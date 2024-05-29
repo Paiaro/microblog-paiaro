@@ -11,9 +11,12 @@ if (isset($_POST['inserir'])) {
 	$tipo = $_POST['tipo'];
 	//criptografando a senha
 	$senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
-	
+
 // chamando a função usuario e passando dados
 	inserirUsuario($conexao, $nome, $email, $tipo, $senha);
+
+	// redirecionamento para a lista de usuarios
+	header ("location:usuarios.php");
 }
 ?>
 
