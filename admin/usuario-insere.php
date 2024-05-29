@@ -5,7 +5,11 @@ require_once "../inc/funcoes-usuarios.php";
 
 // detectando se o botão foi acionado
 if (isset($_POST['inserir'])) {
-echo "ok";
+//capturar os daods digitados
+$nome = $_POST ['nome'];
+$email = $_POST ['email'];
+$tipo = $_POST ['tipo'];
+
 }
 ?>
 
