@@ -18,6 +18,8 @@ function inserirUsuario($conexao, $nome, $email, $tipo, $senha)
 function lerUsuarios($conexao){
 
 $sql = "SELECT id,nome,tipo,email FROM usuarios";
+
+mysqli_query($conexao,$sql) or die(mysqli_error($conexao));
 }
 
 
