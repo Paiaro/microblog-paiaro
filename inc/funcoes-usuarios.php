@@ -18,9 +18,12 @@ function inserirUsuario($conexao, $nome, $email, $tipo, $senha)
 function lerUsuarios($conexao){
 
 $sql = "SELECT id,nome,tipo,email FROM usuarios";
+//execução do comando e armazenamento do resultado
+$resultado = mysqli_query($conexao,$sql) or die(mysqli_error($conexao));
 
-mysqli_query($conexao,$sql) or die(mysqli_error($conexao));
 
+// Retornamos o resultado TRANSFORMADO em array associativo
+return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
 
 }
 
