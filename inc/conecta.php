@@ -19,10 +19,11 @@ mysqli_set_charset($conexao, "utf8");
 
 // fazendo teste de conexão
 
-if (!$conexao) {
-    // comando die "mata a aplicação" fazendo ela parar.
-    die("WASTED" .mysqli_connect_error());
-}else{
-echo "CONEXÃO BEM SUCEDIDA !";
+// if (!$conexao) {
+//     // comando die "mata a aplicação" fazendo ela parar.
+//     die("WASTED" .mysqli_connect_error());
+// }else{
+// echo "CONEXÃO BEM SUCEDIDA !";
 
-}
+// }
+
