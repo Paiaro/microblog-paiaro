@@ -6,7 +6,7 @@
 $servidor = "localhost";
 $usuario =  "root";
 $senha = "";
-$banco = "microblog_paiaro";
+$banco = "microblog_gabriel";
 
 
 //função para conexão com o servidor de banco de dados.
@@ -23,6 +23,6 @@ if (!$conexao) {
     // comando die "mata a aplicação" fazendo ela parar.
     die("WASTED" .mysqli_connect_error());
 }else{
-echo "deu certo";
+echo "CONEXÃO BEM SUCEDIDA !";
 
 }
