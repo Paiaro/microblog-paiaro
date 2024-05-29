@@ -2,8 +2,9 @@
 require_once "../inc/cabecalho-admin.php";
 // Importando as funções de manipulação dos usuários
 require_once "../inc/funcoes-usuarios.php";
+
 // detectando se o botão foi acionado
-if ($_POST['inserir']) {
+if (isset($_POST['inserir'])) {
 echo "ok";
 }
 ?>
