@@ -7,6 +7,6 @@ function inserirUsuario($conexao, $nome, $email, $tipo, $senha ){
     $sql = "INSERT INTO usuarios (nome, email, tipo, senha) VALUES ('$nome', '$email', '$tipo','$senha')";
 
     // Executando o comando no banco
-    mysqli_query($conexao,$sql) or die();
+    mysqli_query($conexao,$sql) or die(mysqli_error($conexao));
 
 }
