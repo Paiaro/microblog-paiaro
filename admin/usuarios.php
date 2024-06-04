@@ -32,9 +32,9 @@ $lsitaUsuarios = lerUsuarios($conexao);
 				</thead>
 
 				<tbody>
-
+<?php foreach ($lsitaUsuarios as $usuario){ ?>
 					<tr>
-						<td> Nome... </td>
+						<td> nome... </td>
 						<td> E-mail... </td>
 						<td> Tipo... </td>
 						<td class="text-center">
@@ -49,7 +49,8 @@ $lsitaUsuarios = lerUsuarios($conexao);
 							</a>
 						</td>
 					</tr>
-
+					
+				<?php } ?>
 				</tbody>                
 			</table>
 	</div>
