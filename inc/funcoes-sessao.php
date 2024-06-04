@@ -17,7 +17,9 @@ function verificaAcesso()
     // se não existir uma variavel de sessão chamada "id" (baseada nos ids usuarios do banco), então significa que o usuario não esta logado.
 
     if (!isset($_SESSION['id'])) {
+        //portanto, destuimos a sessão
         session_destroy();
+        // fazemos o usuario voltar para a página login.
         header("location: ../login.php");
         exit; //or die();
     }
