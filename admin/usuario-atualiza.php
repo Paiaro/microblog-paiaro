@@ -36,8 +36,12 @@ $dadosDoUsuario = lerUmUsuario($conexao,$id);
 				<label class="form-label" for="tipo">Tipo:</label>
 				<select class="form-select" name="tipo" id="tipo" required>
 					<option value=""></option>
-					<option value="editor">Editor</option>
-					<option value="admin">Administrador</option>
+
+					<option <?php if ($dadosDoUsuario['tipo'] == 'editor') 
+						echo 'selected' ?> value="editor">Editor</option>
+
+					<option <?php if ($dadosDoUsuario['tipo'] == 'admin') 
+						echo 'selected' ?> value="admin">Administrador</option>
 				</select>
 			</div>
 			
