@@ -17,6 +17,7 @@ if (isset($_POST['atualizar'])) {
 	if (empty($_POST['senha']) || password_verify($_POST['senha'], $dadosDoUsuario['senha'])) {
 		
 	}else {
+		
 	
 	}
 
