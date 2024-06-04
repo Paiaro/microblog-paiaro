@@ -14,6 +14,7 @@ if (!isset($_SESSION)) {
 
 function verificaAcesso()
 {
+    // se não existir uma variavel de sessão chamada "id" (baseada nos ids usuarios do banco), então significa que o usuario não esta logado.
 
     if (!isset($_SESSION['id'])) {
         session_destroy();
