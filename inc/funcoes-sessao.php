@@ -5,3 +5,5 @@
 // nestas areas o acesso só é possivel mediante alguma forma de autenticação : login, senha,digital, facil.
 
 
+// verificação se não há uma sessão em funcionamento
+
