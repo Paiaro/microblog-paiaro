@@ -12,9 +12,6 @@ function inserirUsuario($conexao, $nome, $email, $tipo, $senha)
 }
 
 
-
-
-
 function lerUsuarios($conexao)
 {
 
@@ -36,4 +33,8 @@ function lerUmUsuario($conexao, $id){
     // retornamos um unico array associativo com os do usuario selecionado
     return mysqli_fetch_assoc($resultado);
 
+}
+function atualizarUsuario($conexao, $id, $nome, $email, $senha, $tipo){
+
+    
 }
