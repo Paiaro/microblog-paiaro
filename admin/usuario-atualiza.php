@@ -4,8 +4,10 @@ require_once "../inc/funcoes-usuarios.php";
 
 // Pegando o valor do parâmetro id vindo da url
 $id = $_GET["id"];
+// executando a função com o id e recuperando os dados do usuario
+$dadosDoUsuario = lerUmUsuario($conexao,$id);
 ?>
-
+<pre><?=var_dump($dadosDoUsuario)?></pre>
 
 <div class="row">
 	<article class="col-12 bg-white rounded shadow my-1 py-4">
