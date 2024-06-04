@@ -14,6 +14,11 @@ if (isset($_POST['atualizar'])) {
 	
 	// logica para tratamento da senha (se o campo da senha estiver vazio ou se a senha digitada for a mesma já existente no banco, então segnifica usuario NÃO alterou a senha. Portanto, devemos manter a senhas já existente)
 
+	if (empty($_POST['senha']) || password_verify($_POST['senha'], $dadosDoUsuario['senha'])) {
+		
+	}else {
+	
+	}
 
 
 
