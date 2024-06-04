@@ -1,4 +1,5 @@
 <?php
+require_once "../inc/funcoes-sessao.php";
 // Guardando o nome da página atual
 $pagina = basename($_SERVER['PHP_SELF']);
 ?>
