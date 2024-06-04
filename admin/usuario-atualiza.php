@@ -7,7 +7,6 @@ $id = $_GET["id"];
 // executando a função com o id e recuperando os dados do usuario
 $dadosDoUsuario = lerUmUsuario($conexao,$id);
 ?>
-<pre><?=var_dump($dadosDoUsuario)?></pre>
 
 <div class="row">
 	<article class="col-12 bg-white rounded shadow my-1 py-4">
@@ -20,12 +19,12 @@ $dadosDoUsuario = lerUmUsuario($conexao,$id);
 
 			<div class="mb-3">
 				<label class="form-label" for="nome">Nome:</label>
-				<input class="form-control" type="text" id="nome" name="nome" required>
+				<input value="<?=$dadosDoUsuario['nome']?>" class="form-control" type="text" id="nome" name="nome" required>
 			</div>
 
 			<div class="mb-3">
 				<label class="form-label" for="email">E-mail:</label>
-				<input class="form-control" type="email" id="email" name="email" required>
+				<input value="<?=$dadosDoUsuario['email']?>" class="form-control" type="email" id="email" name="email" required>
 			</div>
 
 			<div class="mb-3">
