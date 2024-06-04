@@ -41,9 +41,8 @@ function atualizarUsuario($conexao, $id, $nome, $email, $senha, $tipo){
 }
 
 function excluirUsuario($conexao, $id){
-
-$sql = "DELETE usuarios WHERE id = $id";
-mysqli_query($conexao,$sql) or die (mysqli_error($conexao));
+    $sql = "DELETE FROM usuarios WHERE id = $id";
+    mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
 }
 
 // obter o id do usuario que sera excluido, chamar a funçao que iera fazer o delete e redirecionar a pagina de usuarios

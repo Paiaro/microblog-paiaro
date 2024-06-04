@@ -44,8 +44,8 @@ $lsitaUsuarios = lerUsuarios($conexao);
 							<i class="bi bi-pencil"></i> Atualizar
 							</a>
 						
-							<a class="btn btn-danger excluir?id=<?=$usuario["id"]?>" 
-							href="usuario-exclui.php">
+							<a class="btn btn-danger excluir" 
+							href="usuario-exclui.php?id=<?=$usuario["id"]?>">
 							<i class="bi bi-trash"></i> Excluir
 							</a>
 						</td>
