@@ -32,6 +32,13 @@ $lsitaUsuarios = lerUsuarios($conexao);
 				</thead>
 
 				<tbody>
+					<?php
+					function compararNomes($a, $b) {
+						return strcmp($a["nome"], $b["nome"]);
+					}
+					
+					usort($lsitaUsuarios, 'compararNomes');
+					?>?>
 <?php foreach ($lsitaUsuarios as $usuario){ ?>
 					<tr>
 						<td> <?=$usuario["nome"]?> </td>
