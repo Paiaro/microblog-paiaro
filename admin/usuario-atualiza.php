@@ -6,6 +6,20 @@ require_once "../inc/funcoes-usuarios.php";
 $id = $_GET["id"];
 // executando a função com o id e recuperando os dados do usuario
 $dadosDoUsuario = lerUmUsuario($conexao,$id);
+
+if (isset($_POST['atualizar'])) {
+	$nome = $_POST ['nome'];
+	$email = $_POST ['email'];
+	$tipo = $_POST ['tipo'];
+	
+	// logica para tratamento da senha (se o campo da senha estiver vazio ou se a senha digitada for a mesma já existente no banco, então segnifica usuario NÃO alterou a senha. Portanto, devemos manter a senhas já existente)
+
+
+
+
+	// caso contrario, pegaremos a senha nova e a criptografamos antes de mandarmos para o banco
+}
+
 ?>
 
 <div class="row">
