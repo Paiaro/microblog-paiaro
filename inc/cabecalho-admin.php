@@ -4,6 +4,8 @@ verificaAcesso();
 // Guardando o nome da página atual
 $pagina = basename($_SERVER['PHP_SELF']);
 
+
+//  se o parametro de URL 'sair' existir, ou seja, quando o link for clicado, então execute a função logout.
 if (isset($_GET['sair'])){
 logout();
 }
