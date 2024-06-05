@@ -9,6 +9,7 @@ $pagina = basename($_SERVER['PHP_SELF']);
 if (isset($_GET['sair'])){
 logout();
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br" class="h-100">
@@ -44,11 +45,11 @@ logout();
             <li class="nav-item">
                 <a class="nav-link" href="meu-perfil.php">Meu perfil</a>
             </li>
-                       
+            <?php if (!ocultargerenciador()):?>     
             <li class="nav-item">
-                <a class="nav-link" href="usuarios.php">Usuários</a>
+                <a  class="nav-link" href="usuarios.php">Usuários</a>
             </li>
-            
+            <?php endif; ?>
             <li class="nav-item">
                 <a class="nav-link" href="noticias.php">Notícias</a>
             </li>
