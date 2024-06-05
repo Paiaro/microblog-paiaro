@@ -2,6 +2,14 @@
 require "inc/cabecalho.php"; 
 require_once "inc/funcoes-sessao.php";
 require_once "inc/funcoes-usuarios.php";
+
+if (isset ($_POST['entrar'])) {
+	// validando os campos
+	if (empty($_POST['email']) || empty($_POST['senha'])) {
+		header("location: ../login.php?");
+		exit;
+	} 
+}
 ?>
 
 <div class="row">
