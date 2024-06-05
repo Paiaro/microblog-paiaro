@@ -1,5 +1,7 @@
 <?php
 require "inc/cabecalho.php"; 
+require_once "inc/funcoes-sessao.php";
+require_once "inc/funcoes-usuarios.php";
 ?>
 
 <div class="row">
