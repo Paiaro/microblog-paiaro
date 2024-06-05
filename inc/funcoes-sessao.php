@@ -24,3 +24,11 @@ function verificaAcesso()
         exit; //or die();
     }
 }
+
+function login($id, $nome, $tipo)
+{
+    //variaveis de sessão
+    $_SESSION['id'] = $id;
+    $_SESSION['nome'] = $nome;
+    $_SESSION['tipo'] = $tipo;
+}
