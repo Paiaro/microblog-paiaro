@@ -21,7 +21,9 @@ $usuario = buscarUsuario ($conexao,$email);
 if($usuario !== null && password_verify($senha, $usuario['senha'])){
 // então, inicie o processo de login
 
-echo "beleza, entra nessa bagaça";
+login($usuario['id'], $usuario['nome'], $usuario['tipo']);
+header ("location:admin/index.php");
+exit;
 }else {
 	// senão, senha esta errada e nao pode entrar no sistema
 	header("location:login.php?dados_incorretos");
