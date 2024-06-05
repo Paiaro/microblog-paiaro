@@ -16,9 +16,17 @@ if (isset ($_POST['entrar'])) {
 // 1) buscando no banco de dados, atravez do email digitado, se existe um usuário cadastrado.
 $usuario = buscarUsuario ($conexao,$email);
 
+// 2) verificação de usuarui e senha se o usuario existe no banco e a senha digitada for igual a do banco de dados...
 
+if($usuario !== null && password_verify($senha, $usuario['senha'])){
+// então, inicie o processo de login
 
-echo "<pre>"; var_dump($usuario); echo"</pre>";
+echo "beleza, entra nessa bagaça";
+}else{
+	// senão, senha esta errada e nao pode entrar no sistema
+	echo "SAI DESSA PAGINA, VAGABUNDO !";
+}
+
 }
 ?>
 
