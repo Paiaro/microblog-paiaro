@@ -24,7 +24,8 @@ if($usuario !== null && password_verify($senha, $usuario['senha'])){
 echo "beleza, entra nessa bagaça";
 }else{
 	// senão, senha esta errada e nao pode entrar no sistema
-	echo "SAI DESSA PAGINA, VAGABUNDO !";
+	header("location:login.php?dados_incorretos");
+	exit;
 }
 
 }
