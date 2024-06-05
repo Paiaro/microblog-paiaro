@@ -3,7 +3,7 @@ require_once "../inc/cabecalho-admin.php";
 if (!isset($_SESSION)) {
     session_start();
 }
-function ocultargerenciador() {
+function ocultarGerenciador() {
     if (isset($_SESSION['tipo']) && $_SESSION['tipo'] == 'editor') {
         return true;
     } else {
@@ -26,7 +26,7 @@ function ocultargerenciador() {
                 <i class="bi bi-person"></i> <br>
                 Meu perfil
             </a>
-            <?php if (!ocultargerenciador()): ?> 
+            <?php if (!ocultarGerenciador()): ?> 
 			<a class="btn btn-dark bg-gradient btn-lg" href="usuarios.php">
                 <i class="bi bi-people"></i> <br>
                 Gerenciar usuários

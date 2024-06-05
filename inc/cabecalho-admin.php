@@ -45,7 +45,7 @@ logout();
             <li class="nav-item">
                 <a class="nav-link" href="meu-perfil.php">Meu perfil</a>
             </li>
-            <?php if (!ocultargerenciador()):?>     
+            <?php if (!ocultarGerenciador()):?>     
             <li class="nav-item">
                 <a  class="nav-link" href="usuarios.php">Usuários</a>
             </li>
