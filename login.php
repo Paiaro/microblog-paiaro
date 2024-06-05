@@ -14,7 +14,7 @@ if (isset ($_POST['entrar'])) {
 	$email = $_POST['email'];
 	$senha = $_POST['senha'];
 // 1) buscando no banco de dados, atravez do email digitado, se existe um usuário cadastrado.
-$usuario = buscaUsuario ($conexao,$email);
+$usuario = buscarUsuario ($conexao,$email);
 
 }
 ?>

@@ -48,7 +48,7 @@ function excluirUsuario($conexao, $id){
 }
 
 
-function buscaUsuario($conexao,$email){
+function buscarUsuario($conexao,$email){
 
     $sql = "SELECT * FROM usuarios WHERE email = '$email'";
     $resultado = mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
