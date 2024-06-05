@@ -48,6 +48,5 @@ if ($_SESSION['tipo'] != 'admin') {
     header("location: nao-autorizado.php");
     exit;
 }
-
 // então redirecione para pagina "não autorizado".
 }
