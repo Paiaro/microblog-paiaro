@@ -3,14 +3,14 @@ require_once "../inc/cabecalho-admin.php";
 require_once "../inc/funcoes-usuarios.php";
 
 // chamando a função que carrega/lista/lê os usuarios 
-$lsitaUsuarios = lerUsuarios($conexao);
+$listaUsuarios = lerUsuarios($conexao);
 ?>
 
 <div class="row">
 	<article class="col-12 bg-white rounded shadow my-1 py-4">
 		
 		<h2 class="text-center">
-		Usuários <span class="badge bg-dark">X</span>
+		Usuários <span class="badge bg-dark"><?=count($listaUsuarios)?></span>
 		</h2>
 
 		<p class="text-center mt-5">
@@ -33,7 +33,7 @@ $lsitaUsuarios = lerUsuarios($conexao);
 
 				<tbody>
 					
-<?php foreach ($lsitaUsuarios as $usuario){ ?>
+<?php foreach ($listaUsuarios as $usuario){ ?>
 					<tr>
 						<td> <?=$usuario["nome"]?> </td>
 						<td> <?=$usuario["email"]?> </td>
