@@ -18,7 +18,7 @@ $usuario = buscarUsuario ($conexao,$email);
 
 
 
-
+echo "<pre>"; var_dump($usuario); echo"</pre>";
 }
 ?>
 
