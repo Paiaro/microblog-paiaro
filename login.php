@@ -22,7 +22,7 @@ if($usuario !== null && password_verify($senha, $usuario['senha'])){
 // então, inicie o processo de login
 
 echo "beleza, entra nessa bagaça";
-}else{
+}else {
 	// senão, senha esta errada e nao pode entrar no sistema
 	header("location:login.php?dados_incorretos");
 	exit;
