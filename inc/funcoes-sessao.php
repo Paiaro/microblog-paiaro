@@ -32,3 +32,9 @@ function login($id, $nome, $tipo)
     $_SESSION['nome'] = $nome;
     $_SESSION['tipo'] = $tipo;
 }
+function logout()
+{
+    session_destroy();
+    header("location:../login.php");
+    exit;
+}
