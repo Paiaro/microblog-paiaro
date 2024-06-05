@@ -51,10 +51,14 @@ if (isset($_POST['entrar'])) {
 
 		<form action="" method="post" id="form-login" name="form-login" class="mx-auto w-50" autocomplete="off">
 
-			<p class="my-2 alert alert-warning text-center">
-				Mensagens de feedback...
-			</p>
+			<?php
+			if (isset($mensagem)) {
 
+			?>
+				<p class="my-2 alert alert-warning text-center">
+					<?= $mensagem ?>
+				</p>
+			<?php } ?>
 			<div class="mb-3">
 				<label for="email" class="form-label">E-mail:</label>
 				<input class="form-control" type="email" id="email" name="email">
