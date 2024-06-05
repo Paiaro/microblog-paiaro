@@ -6,7 +6,8 @@ require_once "inc/funcoes-usuarios.php";
 if (isset ($_POST['entrar'])) {
 	// validando os campos
 	if (empty($_POST['email']) || empty($_POST['senha'])) {
-		header("location: ../login.php?");
+		// aplicando parametro na pagina login
+		header("location: login.php?campos_obrigatorios");
 		exit;
 	} 
 }
