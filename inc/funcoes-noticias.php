@@ -20,7 +20,7 @@ function upload($arquivo)
 
     // obtendo do servidor o local/nome temporario para o processo de upload
     $temporario = $arquivo['tmp_name'];
-    
+
     // definicao da pasta de destino + nome do arquivo da imagem
     $destino = "../imagens/" . $nome;
 
@@ -28,11 +28,11 @@ function upload($arquivo)
     move_uploaded_file($temporario, $destino);
 }
 
-function inserirNoticias($conexão,$titulo,$texto,$resumo,$nomeImagem,$usuarioId)
+function inserirNoticias($conexão, $titulo, $texto, $resumo, $nomeImagem, $usuarioId)
 {
+    $sql = "INSERT INTO noticias(titulo, texto,resumo,imagem,usuario_id) VALUES ('$titulo','$texto','$resumo','$nomeImagem','$usuarioId')";
 
-
-
+    mysqli_query($conexão,$sql) or die(mysqli_error($conexão));
 }
 
 function lerNoticias($conexão)
