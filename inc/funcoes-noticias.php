@@ -7,7 +7,7 @@ function upload($arquivo)
     // array para validação dos tipos permitidos
     $tiposValidos = ["image/png", "image/jpeg", "image/gif", "image/svg+xml"];
 
-
+    // verificando se o tipo do arquivo nao é um dos existentes no array tiposvalidos
     if (!in_array($arquivo['type'], $tiposValidos)) {
         echo "<scrypt>
         alert('Formato invalido!');
@@ -15,14 +15,24 @@ function upload($arquivo)
         </scrypt>";
         exit;
     }
-    $nome = $arquivo['nome'];
+    // pegando o nome do arquivo
+    $nome = $arquivo['name'];
+
+    // obtendo do servidor o local/nome temporario para o processo de upload
     $temporario = $arquivo['tmp_name'];
+    
+    // definicao da pasta de destino + nome do arquivo da imagem
     $destino = "../imagens/" . $nome;
+
+    // movendo o arquivo da area temporaria para a pasta de destino indicada (imagens).
     move_uploaded_file($temporario, $destino);
 }
 
-function inserirNoticias($conexão)
+function inserirNoticias($conexão,$titulo,$texto,$resumo,$nomeImagem,$usuarioId)
 {
+
+
+
 }
 
 function lerNoticias($conexão)
