@@ -12,6 +12,13 @@ if (isset($_POST['inserir'])) {
 	// Capturando dados do arquivo enviado.
 	$imagem = $_FILES['imagem'];
 
+	// fazendo o upload da imagem para o servidor
+	upload($imagem);
+
+	// enviar os dados para o banco de dados
+	inserirNoticias();
+
+	header("location:noticias.php");
 }
 
 ?>

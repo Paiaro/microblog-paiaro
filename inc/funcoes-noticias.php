@@ -2,16 +2,38 @@
 
 require "conecta.php";
 
-function inserirNoticias($conexão){ 
+function upload($arquivo)
+{
+    // array para validação dos tipos permitidos
+    $tiposValidos = ["image/png", "image/jpeg", "image/gif", "image/svg+xml"];
+
+    if (!in_array($arquivo['type'], $tiposValidos)) {
+        echo "<scrypt>
+        alert('Formato invalido!');
+        history.back();
+        </scrypt>";
+    }
+    $nome = $arquivo['nome'];
+    $temporario = $arquivo['tmp_name'];
+    $destino = "../imagens/" . $nome;
+    move_uploaded_file($temporario, $destino);
 }
 
-function lerNoticias($conexão){ 
+function inserirNoticias($conexão)
+{
 }
 
-function lerUmaNoticia($conexão){ 
+function lerNoticias($conexão)
+{
 }
 
-function atualizarNoticia($conexão){ 
+function lerUmaNoticia($conexão)
+{
 }
-function excluirNoticia($conexão){ 
+
+function atualizarNoticia($conexão)
+{
+}
+function excluirNoticia($conexão)
+{
 }
