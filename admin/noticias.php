@@ -43,7 +43,9 @@ $listaDeNoticias = lerNoticias($conexao, $idUsuario, $tipoUsuario);
 
 						<tr>
 							<td> <?= $noticia["titulo"] ?> </td>
-							<td><?= $noticia["data"] ?></td>
+
+							<td><?= date('d/m/Y H:i', strtotime($noticia["data"])) ?></td>
+							
 							<td> <?= $noticia["nome"] ?> </td>
 							<td class="text-center">
 								<a class="btn btn-warning" href="noticia-atualiza.php?id=<?= $noticia["id"] ?>">
