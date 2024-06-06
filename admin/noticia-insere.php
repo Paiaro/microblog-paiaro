@@ -12,14 +12,6 @@ if (isset($_POST['inserir'])) {
 	// Capturando dados do arquivo enviado.
 	$imagem = $_FILES['imagem'];
 
-	echo "<pre>";
-	var_dump($imagem);
-	echo "</pre>";
-
-	echo "<p>$titulo</p>";
-	echo "<p>$texto</p>";
-	echo "<p>$resumo</p>";
-	echo "<p>$usuarioId</p>";
 }
 
 ?>
