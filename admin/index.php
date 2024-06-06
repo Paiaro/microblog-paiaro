@@ -2,20 +2,15 @@
 require_once "../inc/cabecalho-admin.php";
 
 /* 1) Carregue as funções de usuários */
-require_once "../inc/funcoes-usuarios.php";
+
 
 /* 2) Pegue o ID do usuário através da SESSÃO */
-$id = $_SESSION['id'];
+
 
 /* 3) Chame a função lerUmUsuario e guarde o que ela retorna (array de dados) */
-$dadosUsuario = lerUmUsuario($conexao, $id);
 
 /* 4) Programe uma condicional para detectar se o formulário de atualização foi acionado.  */
-if(isset($_POST['atualizar'])){
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $tipo = $_SESSION['tipo'];
-}
+
 
 /* 4.1) Capture os dados digitados no formulário (nome, e-mail)   
  
