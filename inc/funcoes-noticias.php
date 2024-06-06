@@ -54,3 +54,8 @@ function atualizarNoticia($conexão)
 function excluirNoticia($conexão)
 {
 }
+
+function formataData ($data){
+
+    return date ("d/m/Y H:i", strtotime($data));
+}
