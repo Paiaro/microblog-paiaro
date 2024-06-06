@@ -37,7 +37,7 @@ function inserirNoticias($conexao, $titulo, $texto, $resumo, $nomeImagem, $usuar
 
 function lerNoticias($conexao, $idUsuario, $tipoUsuario)
 {
-    $sql = "SELECT id,titulo,data FROM noticias ORDER BY DATA DESC";
+    $sql = "SELECT noticias.id,noticias.titulo,noticias.data,usuarios.nome FROM noticias JOIN usuarios ORDER BY DATA DESC";
     
     $resultado = mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
 
