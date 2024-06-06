@@ -22,7 +22,7 @@ function upload($arquivo)
     $temporario = $arquivo['tmp_name'];
 
     // definicao da pasta de destino + nome do arquivo da imagem
-    $destino = "../imagens/" . $nome;
+    $destino = "../imagens/".$nome;
 
     // movendo o arquivo da area temporaria para a pasta de destino indicada (imagens).
     move_uploaded_file($temporario, $destino);
@@ -32,7 +32,7 @@ function inserirNoticias($conexão, $titulo, $texto, $resumo, $nomeImagem, $usua
 {
     $sql = "INSERT INTO noticias(titulo, texto,resumo,imagem,usuario_id) VALUES ('$titulo','$texto','$resumo','$nomeImagem','$usuarioId')";
 
-    mysqli_query($conexão,$sql) or die(mysqli_error($conexão));
+    mysqli_query($conexão, $sql) or die(mysqli_error($conexão));
 }
 
 function lerNoticias($conexão)

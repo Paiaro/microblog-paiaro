@@ -21,7 +21,7 @@ if (isset($_POST['inserir'])) {
 		$titulo,
 		$texto,
 		$resumo,
-		$nomeImagem,
+		$imagem['name'],
 		$usuarioId
 	);
 
