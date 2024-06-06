@@ -2,7 +2,7 @@
 require_once "../inc/cabecalho-admin.php";
 require_once "../inc/funcoes-noticias.php";
 
-if ($_POST['inserir']) {
+if (isset ($_POST['inserir'])) {
 	$titulo = $_POST['titulo'];
 	$texto = $_POST['texto'];
 	$resumo = $_POST['resumo'];
@@ -11,6 +11,15 @@ if ($_POST['inserir']) {
 	$usuarioId = $_SESSION['id'];
 // Capturando dados do arquivo enviado.
 	$imagem = $_FILES['imagem'];
+
+	echo "<pre>";
+	var_dump($imagem);
+	echo "</pre>";
+
+	echo "<p>$titulo</p>";
+	echo "<p>$texto</p>";
+	echo "<p>$resumo</p>";
+	echo "<p>$usuarioId</p>";
 }
 
 ?>
@@ -22,7 +31,7 @@ if ($_POST['inserir']) {
 		<h2 class="text-center">
 		Inserir nova notícia
 		</h2>
-				
+				<!-- O atributo enctype com o valor indicado é necessario quando queremos que o formulario aceite o envio de arquivos de qualquer natureza -->
 		<form enctype="multipart/form-data" autocomplete="off" class="mx-auto w-75" action="" method="post" id="form-inserir" name="form-inserir">            
 
 			<div class="mb-3">
