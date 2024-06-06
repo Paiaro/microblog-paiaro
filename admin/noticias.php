@@ -9,7 +9,11 @@ $idUsuario = $_SESSION['id'];
 $tipoUsuario = $_SESSION['tipo'];
 
 $listaDeNoticias = lerNoticias($conexao, $idUsuario, $tipoUsuario);
+
 ?>
+
+<pre> <?=var_dump($listaDeNoticias)?> </pre>
+
 <div class="row">
 	<article class="col-12 bg-white rounded shadow my-1 py-4">
 
