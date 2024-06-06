@@ -6,6 +6,9 @@ if ($_POST['inserir']) {
 	$titulo = $_POST['titulo'];
 	$texto = $_POST['texto'];
 	$resumo = $_POST['resumo'];
+
+	// obtendo o id do usuario que esta logado e inserindo a noticia. portanto, a noticia sera acossiada ao usuario devido ao uso de chave estrangeira e relacionamento no banco.
+	$usuarioId = $_SESSION['id'];
 }
 
 ?>
