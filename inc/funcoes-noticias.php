@@ -35,8 +35,9 @@ function inserirNoticias($conexao, $titulo, $texto, $resumo, $nomeImagem, $usuar
     mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
 }
 
-function lerNoticias($conexão)
+function lerNoticias($conexão,$idUsuario,$tipoUsuario)
 {
+    $sql = "SELECT * FROM noticias (id,tipo) VALUES ('$idUsuario','$tipoUsuario')";
 }
 
 function lerUmaNoticia($conexão)
