@@ -17,7 +17,7 @@ if (isset($_POST['inserir'])) {
 
 	// enviar os dados para o banco de dados
 	inserirNoticias(
-		$conexão,
+		$conexao,
 		$titulo,
 		$texto,
 		$resumo,

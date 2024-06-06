@@ -28,11 +28,11 @@ function upload($arquivo)
     move_uploaded_file($temporario, $destino);
 }
 
-function inserirNoticias($conexão, $titulo, $texto, $resumo, $nomeImagem, $usuarioId)
+function inserirNoticias($conexao, $titulo, $texto, $resumo, $nomeImagem, $usuarioId)
 {
     $sql = "INSERT INTO noticias(titulo, texto,resumo,imagem,usuario_id) VALUES ('$titulo','$texto','$resumo','$nomeImagem','$usuarioId')";
 
-    mysqli_query($conexão, $sql) or die(mysqli_error($conexão));
+    mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
 }
 
 function lerNoticias($conexão)
