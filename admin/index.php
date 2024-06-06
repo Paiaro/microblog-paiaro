@@ -28,14 +28,7 @@ require_once "../inc/cabecalho-admin.php";
 if (!isset($_SESSION)) {
     session_start();
 }
-function ocultarGerenciador()
-{
-    if (isset($_SESSION['tipo']) && $_SESSION['tipo'] == 'editor') {
-        return true;
-    } else {
-        return false;
-    }
-}
+
 
 ?>
 

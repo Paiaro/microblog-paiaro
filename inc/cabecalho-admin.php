@@ -10,6 +10,15 @@ if (isset($_GET['sair'])){
 logout();
 }
 
+function ocultarGerenciador()
+{
+    if (isset($_SESSION['tipo']) && $_SESSION['tipo'] == 'editor') {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br" class="h-100">
