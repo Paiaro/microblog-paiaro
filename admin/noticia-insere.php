@@ -9,6 +9,8 @@ if ($_POST['inserir']) {
 
 	// obtendo o id do usuario que esta logado e inserindo a noticia. portanto, a noticia sera acossiada ao usuario devido ao uso de chave estrangeira e relacionamento no banco.
 	$usuarioId = $_SESSION['id'];
+// Capturando dados do arquivo enviado.
+	$imagem = $_FILES['imagem'];
 }
 
 ?>
@@ -21,7 +23,7 @@ if ($_POST['inserir']) {
 		Inserir nova notícia
 		</h2>
 				
-		<form autocomplete="off" class="mx-auto w-75" action="" method="post" id="form-inserir" name="form-inserir">            
+		<form enctype="multipart/form-data" autocomplete="off" class="mx-auto w-75" action="" method="post" id="form-inserir" name="form-inserir">            
 
 			<div class="mb-3">
                 <label class="form-label" for="titulo">Título:</label>
