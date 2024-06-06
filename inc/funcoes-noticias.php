@@ -7,11 +7,13 @@ function upload($arquivo)
     // array para validação dos tipos permitidos
     $tiposValidos = ["image/png", "image/jpeg", "image/gif", "image/svg+xml"];
 
+
     if (!in_array($arquivo['type'], $tiposValidos)) {
         echo "<scrypt>
         alert('Formato invalido!');
         history.back();
         </scrypt>";
+        exit;
     }
     $nome = $arquivo['nome'];
     $temporario = $arquivo['tmp_name'];
