@@ -61,6 +61,9 @@ function lerUmaNoticia($conexao, $idNoticia, $idUsuario, $tipoUsuario)
         // PODE CARREGAR OU VER SOMENTE SUA PROPRIA NOTICIA
         $sql = "SELECT * FROM noticias WHERE id = $idNoticia AND usuario_id =$idUsuario";
     }
+    $resultado = mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
+    // retornando um arrau com os dados da noticia escolhida
+    return mysqli_fetch_assoc($resultado);
 }
 
 function atualizarNoticia($conexao)
