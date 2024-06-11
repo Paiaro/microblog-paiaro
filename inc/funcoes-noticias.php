@@ -37,11 +37,19 @@ function inserirNoticias($conexao, $titulo, $texto, $resumo, $nomeImagem, $usuar
 
 function lerNoticias($conexao, $idUsuario, $tipoUsuario)
 {
-    $sql = "SELECT noticias.id,noticias.titulo,noticias.data,usuarios.nome FROM noticias JOIN usuarios ON noticias.usuario_id = usuarios.id ORDER BY DATA DESC";
 
-    $resultado = mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
+    if ($tipoUsuario == "admin") {
+        # admin pode ver tudo
 
-    return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+        $sql = "SELECT noticias.id,noticias.titulo,noticias.data,usuarios.nome FROM noticias JOIN usuarios ON noticias.usuario_id = usuarios.id ORDER BY DATA DESC";
+
+        $resultado = mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
+
+        return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+    } else {
+        # Editor pode ver somente o DELE/DELA/DELU
+        $sql = "SELECT titulo, data, id";
+    }
 }
 
 function lerUmaNoticia($conexão)
@@ -55,7 +63,8 @@ function excluirNoticia($conexão)
 {
 }
 
-function formataData ($data){
+function formataData($data)
+{
 
-    return date ("d/m/Y H:i", strtotime($data));
+    return date("d/m/Y H:i", strtotime($data));
 }
