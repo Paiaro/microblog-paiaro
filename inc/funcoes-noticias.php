@@ -70,11 +70,11 @@ function atualizarNoticia($conexao, $titulo, $texto, $resumo, $imagem, $idNotici
 {
     if ($tipoUsuario == 'admin') {
 
-        $sql = "UPDATE noticias SET titulo = '$titulo', texto = '$texto', resumo = '$resumo', imagem = '$imagem', tipo = '$tipoUsuario' WHERE id = $idNoticia"; // CUIDADO "PRERIGO" 
+        $sql = "UPDATE noticias SET titulo = '$titulo', texto = '$texto', resumo = '$resumo', imagem = '$imagem' WHERE id = $idNoticia"; // CUIDADO "PRERIGO" 
         # PODE ATUALIZAR QUALQUER NOTICIA 
         } else {
             # PODE ATUALIZAR SOMENTE SUAS NOTICIAS
-            $sql = "";
+            $sql = "UPDATE noticias SET titulo = '$titulo', texto = '$texto', resumo = '$resumo', imagem = '$imagem' WHERE id = $idNoticia AND usuarui_id = $idUsuario"; // CUIDADO "PRERIGO"
     }
     
 }
