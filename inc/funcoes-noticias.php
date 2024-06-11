@@ -48,7 +48,7 @@ function lerNoticias($conexao, $idUsuario, $tipoUsuario)
         return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
     } else {
         # Editor pode ver somente o DELE/DELA/DELU
-        $sql = "SELECT titulo, data, id";
+        $sql = "SELECT titulo, data, id FROM noticias WHERE usuario_id = $idUsuario ORDER BY data DESC";
     }
 }
 
