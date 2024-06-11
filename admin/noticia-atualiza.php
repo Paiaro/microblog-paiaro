@@ -29,6 +29,10 @@ if (isset($_POST['atualizar'])) {
         $imagem = $_FILES['imagem']['name']; // pegando nome
         upload($_FILES['imagem']); // fazendo upload
     }
+
+    atualizarNoticia($conexao, $titulo, $texto, $resumo, $imagem, $idNoticia, $idUsuario, $tipoUsuario);
+    header("location:noticias.php");
+
 }
 
 ?>
