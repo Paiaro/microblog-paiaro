@@ -10,9 +10,9 @@ $idUsuario = $_SESSION['id'];
 $tipoUsuario = $_SESSION['tipo'];
 
 // Chamando a função e recuperar os dados da notícia
-$dadosNoticia = lerUmaNoticia($conexao,$idNoticia,$idUsuario,$tipoUsuario);
+$dadosNoticia = lerUmaNoticia($conexao, $idNoticia, $idUsuario, $tipoUsuario);
 ?>
-<pre><?= var_dump($dadosNoticia)?></pre>
+
 
 
 <div class="row">
@@ -26,18 +26,18 @@ $dadosNoticia = lerUmaNoticia($conexao,$idNoticia,$idUsuario,$tipoUsuario);
 
             <div class="mb-3">
                 <label class="form-label" for="titulo">Título:</label>
-                <input class="form-control" required type="text" id="titulo" name="titulo">
+                <input value="<?= $dadosNoticia['titulo'] ?>" class="form-control" required type="text" id="titulo" name="titulo">
             </div>
 
             <div class="mb-3">
                 <label class="form-label" for="texto">Texto:</label>
-                <textarea class="form-control" required name="texto" id="texto" cols="50" rows="6"></textarea>
+                <textarea class="form-control" required name="texto" id="texto" cols="50" rows="6"><?= $dadosNoticia['texto'] ?></textarea>
             </div>
 
             <div class="mb-3">
                 <label class="form-label" for="resumo">Resumo (máximo de 300 caracteres):</label>
                 <span id="maximo" class="badge bg-danger">0</span>
-                <textarea class="form-control" required name="resumo" id="resumo" cols="50" rows="2" maxlength="300"></textarea>
+                <textarea class="form-control" required name="resumo" id="resumo" cols="50" rows="2" maxlength="300"><?= $dadosNoticia['resumo'] ?></textarea>
             </div>
 
             <div class="mb-3">
