@@ -72,9 +72,9 @@ function atualizarNoticia($conexao, $titulo, $texto, $resumo, $imagem, $idNotici
 
         $sql = "UPDATE noticias SET titulo = '$titulo', texto = '$texto', resumo = '$resumo', imagem = '$imagem' WHERE id = $idNoticia"; // CUIDADO "PRERIGO" 
         # PODE ATUALIZAR QUALQUER NOTICIA 
-        } else {
-            # PODE ATUALIZAR SOMENTE SUAS NOTICIAS
-            $sql = "UPDATE noticias SET titulo = '$titulo', texto = '$texto', resumo = '$resumo', imagem = '$imagem' WHERE id = $idNoticia AND usuarui_id = $idUsuario"; // CUIDADO "PRERIGO"
+    } else {
+        # PODE ATUALIZAR SOMENTE SUAS NOTICIAS
+        $sql = "UPDATE noticias SET titulo = '$titulo', texto = '$texto', resumo = '$resumo', imagem = '$imagem' WHERE id = $idNoticia AND usuario_id = $idUsuario"; // CUIDADO "PRERIGO"
     }
     mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
 }
