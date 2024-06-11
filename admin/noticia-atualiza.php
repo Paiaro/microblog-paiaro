@@ -32,7 +32,6 @@ if (isset($_POST['atualizar'])) {
 
     atualizarNoticia($conexao, $titulo, $texto, $resumo, $imagem, $idNoticia, $idUsuario, $tipoUsuario);
     header("location:noticias.php");
-
 }
 
 ?>

@@ -66,8 +66,17 @@ function lerUmaNoticia($conexao, $idNoticia, $idUsuario, $tipoUsuario)
     return mysqli_fetch_assoc($resultado);
 }
 
-function atualizarNoticia($conexao)
+function atualizarNoticia($conexao, $titulo, $texto, $resumo, $imagem, $idNoticia, $idUsuario, $tipoUsuario)
 {
+    if ($tipoUsuario == 'admin') {
+
+        $sql = "UPDATE noticias SET titulo = '$titulo', texto = '$texto', resumo = '$resumo', imagem = '$imagem', tipo = '$tipoUsuario' WHERE id = $idNoticia"; // CUIDADO "PRERIGO" 
+        # PODE ATUALIZAR QUALQUER NOTICIA 
+        } else {
+            # PODE ATUALIZAR SOMENTE SUAS NOTICIAS
+            $sql = "";
+    }
+    
 }
 function excluirNoticia($conexao)
 {
