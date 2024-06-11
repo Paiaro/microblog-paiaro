@@ -21,10 +21,15 @@ if (isset($_POST['atualizar'])){
     // lógica para imagem 
 
     // se o campo "imagem" estiver vazio, então significa que o usuario nao quer trocar a imagem. No caso o sistema vai manter a mesma imagem
-
-
-
+if (empty($_FILES['imagem']['name'])) {
+    
+} else {
+    
     // Caso contrario, então pegamos a referencia do novo arquivo (nome e extensão) e fazemos o processo de upload
+}
+
+
+
 }
 
 ?>
