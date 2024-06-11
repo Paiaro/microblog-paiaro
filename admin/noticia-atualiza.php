@@ -11,6 +11,22 @@ $tipoUsuario = $_SESSION['tipo'];
 
 // Chamando a função e recuperar os dados da notícia
 $dadosNoticia = lerUmaNoticia($conexao, $idNoticia, $idUsuario, $tipoUsuario);
+
+if (isset($_POST['atualizar'])){
+
+    $titulo = $_POST ['titulo'];
+    $texto = $_POST ['texto'];
+    $resumo = $_POST ['resumo'];
+
+    // lógica para imagem 
+
+    // se o campo "imagem" estiver vazio, então significa que o usuario nao quer trocar a imagem. No caso o sistema vai manter a mesma imagem
+
+
+
+    // Caso contrario, então pegamos a referencia do novo arquivo (nome e extensão) e fazemos o processo de upload
+}
+
 ?>
 
 
