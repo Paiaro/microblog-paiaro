@@ -12,24 +12,23 @@ $tipoUsuario = $_SESSION['tipo'];
 // Chamando a função e recuperar os dados da notícia
 $dadosNoticia = lerUmaNoticia($conexao, $idNoticia, $idUsuario, $tipoUsuario);
 
-if (isset($_POST['atualizar'])){
+if (isset($_POST['atualizar'])) {
 
-    $titulo = $_POST ['titulo'];
-    $texto = $_POST ['texto'];
-    $resumo = $_POST ['resumo'];
+    $titulo = $_POST['titulo'];
+    $texto = $_POST['texto'];
+    $resumo = $_POST['resumo'];
 
     // lógica para imagem 
 
     // se o campo "imagem" estiver vazio, então significa que o usuario nao quer trocar a imagem. No caso o sistema vai manter a mesma imagem
-if (empty($_FILES['imagem']['name'])) {
-    
-} else {
-    
-    // Caso contrario, então pegamos a referencia do novo arquivo (nome e extensão) e fazemos o processo de upload
-}
+    if (empty($_FILES['imagem']['name'])) {
+        $imagem = $_POST['imagem-existente'];
+    } else {
 
-
-
+        // Caso contrario, então pegamos a referencia do novo arquivo (nome e extensão) e fazemos o processo de upload
+        $imagem = $_FILES['imagem']['name']; // pegando nome
+        upload($_FILES['imagem']); // fazendo upload
+    }
 }
 
 ?>
@@ -64,7 +63,7 @@ if (empty($_FILES['imagem']['name'])) {
             <div class="mb-3">
                 <label for="imagem-existente" class="form-label">Imagem da notícia:</label>
                 <!-- campo somente leitura, meramente informativo -->
-                <input value="<?=$dadosNoticia['imagem']?>" class="form-control" type="text" id="imagem-existente" name="imagem-existente" readonly disabled>
+                <input value="<?= $dadosNoticia['imagem'] ?>" class="form-control" type="text" id="imagem-existente" name="imagem-existente" readonly disabled>
             </div>
 
             <div class="mb-3">
