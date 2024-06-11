@@ -80,7 +80,7 @@ function atualizarNoticia($conexao, $titulo, $texto, $resumo, $imagem, $idNotici
 }
 function excluirNoticia($conexao, $idNoticia, $idUsuario)
 {
-    $sql = "DELETE FROM noticias WHERE id = $idNoticia AND usuario_id = $idUsuario";
+    $sql = "DELETE FROM noticias WHERE id = $idNoticia";
     mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
         
 }
