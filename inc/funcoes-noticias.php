@@ -42,26 +42,31 @@ function lerNoticias($conexao, $idUsuario, $tipoUsuario)
         # admin pode ver tudo
 
         $sql = "SELECT noticias.id,noticias.titulo,noticias.data,usuarios.nome FROM noticias JOIN usuarios ON noticias.usuario_id = usuarios.id ORDER BY DATA DESC";
-
-        
     } else {
         # Editor pode ver somente o DELE/DELA/DELU
         $sql = "SELECT titulo, data, id FROM noticias WHERE usuario_id = $idUsuario ORDER BY data DESC";
     }
-    
+
     $resultado = mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
 
-        return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+    return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
 }
 
-function lerUmaNoticia($conexão)
+function lerUmaNoticia($conexao, $idNoticia, $idUsuario, $tipoUsuario)
 {
+    if ($tipoUsuario == 'admin') {
+        // PODE CARREGAR E VER QUALQUER NOTICIA
+        $sql = "SELECT * FROM noticias WHERE id = $idNoticia";
+    } else {
+        // PODE CARREGAR OU VER SOMENTE SUA PROPRIA NOTICIA
+        $sql = "SELECT * FROM noticias WHERE id = $idNoticia AND usuario_id =$idUsuario";
+    }
 }
 
-function atualizarNoticia($conexão)
+function atualizarNoticia($conexao)
 {
 }
-function excluirNoticia($conexão)
+function excluirNoticia($conexao)
 {
 }
 
