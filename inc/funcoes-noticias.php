@@ -43,13 +43,15 @@ function lerNoticias($conexao, $idUsuario, $tipoUsuario)
 
         $sql = "SELECT noticias.id,noticias.titulo,noticias.data,usuarios.nome FROM noticias JOIN usuarios ON noticias.usuario_id = usuarios.id ORDER BY DATA DESC";
 
-        $resultado = mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
-
-        return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+        
     } else {
         # Editor pode ver somente o DELE/DELA/DELU
         $sql = "SELECT titulo, data, id FROM noticias WHERE usuario_id = $idUsuario ORDER BY data DESC";
     }
+    
+    $resultado = mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
+
+        return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
 }
 
 function lerUmaNoticia($conexão)
