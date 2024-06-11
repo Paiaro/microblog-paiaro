@@ -76,7 +76,7 @@ function atualizarNoticia($conexao, $titulo, $texto, $resumo, $imagem, $idNotici
             # PODE ATUALIZAR SOMENTE SUAS NOTICIAS
             $sql = "UPDATE noticias SET titulo = '$titulo', texto = '$texto', resumo = '$resumo', imagem = '$imagem' WHERE id = $idNoticia AND usuarui_id = $idUsuario"; // CUIDADO "PRERIGO"
     }
-    
+    mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
 }
 function excluirNoticia($conexao)
 {
