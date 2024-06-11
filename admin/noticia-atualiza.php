@@ -34,6 +34,7 @@ if (isset($_POST['atualizar'])) {
     header("location:noticias.php");
 }
 
+
 ?>
 
 
