@@ -43,7 +43,7 @@ $dadosNoticia = lerUmaNoticia($conexao, $idNoticia, $idUsuario, $tipoUsuario);
             <div class="mb-3">
                 <label for="imagem-existente" class="form-label">Imagem da notícia:</label>
                 <!-- campo somente leitura, meramente informativo -->
-                <input class="form-control" type="text" id="imagem-existente" name="imagem-existente" readonly>
+                <input value="<?=$dadosNoticia['imagem']?>" class="form-control" type="text" id="imagem-existente" name="imagem-existente" readonly disabled>
             </div>
 
             <div class="mb-3">
