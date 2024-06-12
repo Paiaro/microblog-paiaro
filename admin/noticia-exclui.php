@@ -5,6 +5,20 @@ require_once "../inc/funcoes-sessao.php";
 verificaAcesso();
 
 if (isset($_GET['id']) && !empty($_GET['id'])) {
-    excluirNoticia($conexao,$idNoticia, $_GET['id']);
-    header("Location: noticias.php");
+    $idNoticia = $_GET['id'];
+    $idUsuario = $_SESSION['usuario_id'];
+    $tipoUsuario = $_SESSION['tipo'];
+
+    // verificando se o usuario é adminn
+    if ($tipoUsuario == 'admin') {
+        excluirNoticia($conexao, $idNoticia, $idUsuario);
+        header("Location: noticias.php");
+    } else {
+        // se não, não pode fazer esta ação
+        echo "<script>
+        alert('Você não tem permissão para excluir esta notícia.');
+        history.back();
+        </script>";
+    }
 }
+?>
