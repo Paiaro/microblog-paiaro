@@ -122,7 +122,7 @@ function lerNoticiaCompleta($conexao, $idNoticia)
 # resultados.php
 function busca($conexao, $termoDigitado)
 {
-    $sql = "SELECT ";
+    $sql = "SELECT id, data, titulo, resumo FROM noticias WHERE titulo LIKE '%$termoDigitado%' OR resumo LIKE '%$termoDigitado%' OR texto LIKE '%$termoDigitado%' ORDER BY DATA DESC";
     $resultado = mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
     return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
 }
