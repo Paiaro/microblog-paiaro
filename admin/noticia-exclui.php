@@ -15,10 +15,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         header("Location: noticias.php");
     } else {
         // se não, não pode fazer esta ação
-        echo "<script>
-        alert('Você não tem permissão para excluir esta notícia.');
-        history.back();
-        </script>";
+        header("location: nao-autorizado.php");
     }
 }
 ?>
