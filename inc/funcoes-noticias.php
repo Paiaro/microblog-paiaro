@@ -106,8 +106,16 @@ function lerTodasNoticias($conexao)
 }
 
 # noticia.php
-function lerNoticiaCompleta($conexao)
+function lerNoticiaCompleta($conexao, $idNoticia)
 {
+    $sql = "SELECT * FROM noticias WHERE id = $idNoticia";
+    $resultado = mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
+
+    if ($resultado && mysqli_num_rows($resultado) > 0) {
+        return mysqli_fetch_assoc($resultado);
+    } else {
+        return null;
+    }
 }
 
 # resultados.php
