@@ -120,6 +120,9 @@ function lerNoticiaCompleta($conexao, $idNoticia)
 
 
 # resultados.php
-function busca($conexao)
+function busca($conexao, $termoDigitado)
 {
+    $sql = "SELECT ";
+    $resultado = mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
+    return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
 }
