@@ -106,7 +106,8 @@ function lerTodasNoticias($conexao)
 }
 
 # noticia.php
-function lerNoticiaCompleta($conexao, $idNoticia) {
+function lerNoticiaCompleta($conexao, $idNoticia)
+{
     $sql = "SELECT noticias.*, usuarios.nome AS nomeAutor
             FROM noticias
             JOIN usuarios ON noticias.usuario_id = usuarios.id
