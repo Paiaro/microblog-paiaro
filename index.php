@@ -1,5 +1,6 @@
 <?php 
 require "inc/cabecalho.php"; 
+require_once "inc/funcoes-noticias.php";
 ?>  
 
 
