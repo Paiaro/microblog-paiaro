@@ -11,12 +11,13 @@ $termoDigitado = $_GET['busca'];
 $dadosDaBusca = busca($conexao, $termoDigitado);
 ?>
 
-<?php foreach($dadosDaBusca as $busca){?>
+
 <div class="row bg-white rounded shadow my-1 py-4">
     <h2 class="col-12 fw-light">
         Você procurou por <span class="badge bg-dark"><?=$termoDigitado?></span> e
-        obteve <span class="badge bg-info"><?=count($busca)?></span> resultados
+        obteve <span class="badge bg-info"><?=count($dadosDaBusca)?></span> resultados
     </h2>
+    <?php foreach($dadosDaBusca as $busca){?>
     <div class="col-12 my-1">
         <article class="card">
             <div class="card-body">
