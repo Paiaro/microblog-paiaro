@@ -96,12 +96,15 @@ function formataData($data)
 
 #index.php
 function lerTodasNoticias ($conexao){
+
 }
 
 # noticia.php
 function lerNoticiaCompleta ($conexao){
+
 }
 
 # resultados.php
 function busca ($conexao){
+    
 }
