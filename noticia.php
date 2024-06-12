@@ -14,7 +14,7 @@ if (isset($_GET['id'])) {
                     <time><?= formataData($noticia['data']) ?></time> - <span><?= $noticia['nomeAutor'] ?></span>
                 </p>
                 <img src="imagens/<?= $noticia['imagem'] ?>" alt="" class="float-start pe-2 img-fluid">
-                <p><?= $noticia['texto'] ?></p>
+                <p class="ajusta-texto"><?= $noticia['texto'] ?></p>
             </article>
         </div>
 <?php
