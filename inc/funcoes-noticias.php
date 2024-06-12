@@ -89,3 +89,19 @@ function formataData($data)
 
     return date("d/m/Y H:i", strtotime($data));
 }
+
+
+
+# funcoes usadas para paginas publicas index, noticia, resultado
+
+#index.php
+function lerTodasNoticias ($conexao){
+}
+
+# noticia.php
+function lerNoticiaCompleta ($conexao){
+}
+
+# resultados.php
+function busca ($conexao){
+}
