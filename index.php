@@ -9,7 +9,7 @@ $listaDeNoticias = lerTodasNoticias($conexao);
         <!-- INÍCIO Card -->
         <div class="col-md-6 my-1 px-md-1">
             <article class="card shadow-sm h-100">
-                <a href="noticia.php<?=$noticia['id']?>" class="card-link">
+                <a href="noticia.php?id=<?=$noticia['id']?>" class="card-link">
                     <img src="imagens/<?=$noticia['imagem']?>" class="card-img-top" alt="">
                     <div class="card-body">
                         <h3 class="fs-4 card-title"><?=$noticia['titulo']?></h3>
