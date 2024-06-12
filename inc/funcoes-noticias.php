@@ -9,10 +9,10 @@ function upload($arquivo)
 
     // verificando se o tipo do arquivo nao é um dos existentes no array tiposvalidos
     if (!in_array($arquivo['type'], $tiposValidos)) {
-        echo "<scrypt>
+        echo "<script>
         alert('Formato invalido!');
         history.back();
-        </scrypt>";
+        </script>";
         exit;
     }
     // pegando o nome do arquivo
@@ -80,9 +80,8 @@ function atualizarNoticia($conexao, $titulo, $texto, $resumo, $imagem, $idNotici
 }
 function excluirNoticia($conexao, $idNoticia, $idUsuario)
 {
-    $sql = "DELETE FROM noticias WHERE id = $idNoticia";
-    mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
-        
+    $sql = "DELETE FROM noticias WHERE id = $idNoticia AND usuario_id = $idUsuario";
+    mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
 }
 
 function formataData($data)
