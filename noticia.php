@@ -11,18 +11,14 @@ if (isset($_GET['id'])) {
             <article class="col-12">
                 <h2><?= $noticia['titulo'] ?></h2>
                 <p class="font-weight-light">
-                    <time><?= formataData($noticia['data']) ?></time> - <span><?= $noticia['autor_nome'] ?></span>
+                    <time><?= formataData($noticia['data']) ?></time> - <span><?= $noticia['nomeAutor'] ?></span>
                 </p>
                 <img src="imagens/<?= $noticia['imagem'] ?>" alt="" class="float-start pe-2 img-fluid">
                 <p><?= $noticia['texto'] ?></p>
             </article>
         </div>
 <?php
-    } else {
-        echo "Notícia não encontrada.";
     }
-} else {
-    echo "ID da notícia não fornecido.";
 }
 
 require_once "inc/rodape.php";
