@@ -8,9 +8,9 @@ verificaNivel();
 // detectando se o botão foi acionado
 if (isset($_POST['inserir'])) {
 	//capturar os daods digitados
-	$nome = $_POST['nome'];
-	$email = $_POST['email'];
-	$tipo = $_POST['tipo'];
+	$nome = htmlspecialchars ($_POST['nome']);
+	$email = htmlspecialchars ($_POST['email']);
+	$tipo = htmlspecialchars ($_POST['tipo']);
 	//criptografando a senha
 	$senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
 
