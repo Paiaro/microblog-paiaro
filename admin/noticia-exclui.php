@@ -5,9 +5,9 @@ require_once "../inc/funcoes-sessao.php";
  
 verificaAcesso();
  
-$idNoticia = $_GET['id'];
-$idUsuario = $_SESSION['id'];
-$tipoUsuario = $_SESSION['tipo'];
+$idNoticia = (int)$_GET['id'];
+$idUsuario = (int)$_SESSION['id'];
+$tipoUsuario = (int)$_SESSION['tipo'];
  
 excluirNoticia($conexao, $idNoticia, $idUsuario, $tipoUsuario);
  

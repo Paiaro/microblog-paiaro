@@ -4,7 +4,7 @@ require_once "inc/funcoes-noticias.php";
 
 // capturando via URL GET o que foi digitado no campo de busca
 
-$termoDigitado = $_GET['busca'];
+$termoDigitado = mysqli_real_escape_string ($conexao, htmlspecialchars_decode ($_GET['busca']));
 
 // executando a função de busca no banco de dados
 
